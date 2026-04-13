@@ -2,8 +2,8 @@
   const business = {
     name: 'Torres Compra Cash',
     email: 'atmrealestatepr@gmail.com',
-    phoneDisplay: '(787)-415-4344',
-    phoneDigits: '787-415-4344',
+    phoneDisplay: '1(787)-415-4344',
+    phoneDigits: '17874154344',
     whatsappMessage:
       'Hola, quiero recibir una oferta cash para mi propiedad en Puerto Rico.',
     messengerUrl: 'https://m.me/torrescompracash',
