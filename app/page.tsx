@@ -1,4 +1,10 @@
-  export default function TorresCompraCashWebsite() {
+   declare global {
+  interface Window {
+    fbq?: (...args: any[]) => void;
+  }
+}
+
+export default function TorresCompraCashWebsite() {
   const business = {
     name: 'Torres Compra Cash',
     email: 'atmrealestatepr@gmail.com',
@@ -69,6 +75,18 @@
     },
   ];
 
+  const trackContact = () => {
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'Contact');
+    }
+  };
+
+  const trackLead = () => {
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'Lead');
+    }
+  };
+
   return (
     <div className="site">
       <header className="topbar">
@@ -79,7 +97,13 @@
           </div>
 
           <div className="topbar-actions">
-            <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn btn-outline">
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-outline"
+              onClick={trackContact}
+            >
               WhatsApp
             </a>
             <a href="#contacto" className="btn btn-primary">
@@ -108,7 +132,13 @@
                 <a href="#contacto" className="btn btn-primary">
                   Quiero una oferta cash
                 </a>
-                <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn btn-outline">
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn-outline"
+                  onClick={trackContact}
+                >
                   Escríbenos por WhatsApp
                 </a>
                 <a
@@ -116,6 +146,7 @@
                   target="_blank"
                   rel="noreferrer"
                   className="btn btn-outline"
+                  onClick={trackContact}
                 >
                   Abrir Messenger
                 </a>
@@ -152,7 +183,12 @@
               <h2>Solicita una evaluación rápida</h2>
               <p>Completa el formulario o escríbenos directo por WhatsApp.</p>
 
-              <form action={business.formAction} method="POST" className="lead-form">
+              <form
+                action={business.formAction}
+                method="POST"
+                className="lead-form"
+                onSubmit={trackLead}
+              >
                 <input type="hidden" name="_subject" value="Nuevo lead - Torres Compra Cash" />
                 <input type="hidden" name="source" value="website" />
 
@@ -179,6 +215,7 @@
                     target="_blank"
                     rel="noreferrer"
                     className="btn btn-outline full"
+                    onClick={trackContact}
                   >
                     Hablar por WhatsApp
                   </a>
@@ -187,6 +224,7 @@
                     target="_blank"
                     rel="noreferrer"
                     className="btn btn-outline full"
+                    onClick={trackContact}
                   >
                     Hablar por Messenger
                   </a>
@@ -354,6 +392,7 @@
                 target="_blank"
                 rel="noreferrer"
                 className="btn btn-gold full"
+                onClick={trackContact}
               >
                 WhatsApp ahora
               </a>
@@ -362,6 +401,7 @@
                 target="_blank"
                 rel="noreferrer"
                 className="btn btn-outline full"
+                onClick={trackContact}
               >
                 Messenger
               </a>
@@ -371,7 +411,13 @@
       </main>
 
       <div className="mobile-bar">
-        <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn btn-gold full">
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="btn btn-gold full"
+          onClick={trackContact}
+        >
           WhatsApp
         </a>
         <a href="#contacto" className="btn btn-primary full">
