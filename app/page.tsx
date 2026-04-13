@@ -1,9 +1,9 @@
    export default function TorresCompraCashWebsite() {
   const business = {
     name: 'Torres Compra Cash',
-    email: 'info@torrescompracash.com',
-    phoneDisplay: '(787) 000-0000',
-    phoneDigits: '17870000000',
+    email: 'atmrealestatepr@gmail.com',
+    phoneDisplay: '(787)-415-4344',
+    phoneDigits: '(787)-415-4344',
     whatsappMessage:
       'Hola, quiero recibir una oferta cash para mi propiedad en Puerto Rico.',
     messengerUrl: 'https://m.me/torrescompracash',
