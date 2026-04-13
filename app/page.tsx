@@ -361,7 +361,7 @@
       <footer className="footer">
         <div className="container footer-inner">
           <div>© 2026 {business.name}. Todos los derechos reservados.</div>
-          <div>Real Estate • Puerto Rico</div>
+          <div> Real Estate • Puerto Rico</div>
         </div>
       </footer>
     </div>
