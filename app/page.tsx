@@ -182,10 +182,7 @@
                   </a>
                 </div>
 
-                <p className="small-note">
-                  Cambia <strong>formAction</strong> por tu endpoint de Formspree para recibir leads
-                  de verdad.
-                </p>
+               
               </form>
             </div>
           </div>
