@@ -1,4 +1,6 @@
-   declare global {
+  "use client";
+
+declare global {
   interface Window {
     fbq?: (...args: any[]) => void;
   }
