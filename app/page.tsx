@@ -75,7 +75,7 @@
         <div className="container topbar-inner">
           <div>
             <div className="brand">{business.name}</div>
-            <div className="brand-sub">Wholesaling Real Estate • Puerto Rico</div>
+            <div className="brand-sub"> Real Estate • Puerto Rico</div>
           </div>
 
           <div className="topbar-actions">
