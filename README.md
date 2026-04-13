@@ -32,3 +32,4 @@ npm run dev
 
 ## Domain later
 After deployment, connect your custom domain in Vercel.
+updated
