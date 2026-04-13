@@ -1,8 +1,8 @@
-   export default function TorresCompraCashWebsite() {
+  export default function TorresCompraCashWebsite() {
   const business = {
     name: 'Torres Compra Cash',
     email: 'atmrealestatepr@gmail.com',
-    phoneDisplay: '1(787)-415-4344',
+    phoneDisplay: '(787) 415-4344',
     phoneDigits: '17874154344',
     whatsappMessage:
       'Hola, quiero recibir una oferta cash para mi propiedad en Puerto Rico.',
@@ -53,19 +53,19 @@
   const faqs = [
     {
       q: '¿Compran casas en cualquier condición?',
-      a: 'Sí. Evaluamos propiedades en distintas condiciones, incluyendo casas que necesitan reparaciones.',
+      a: 'Evaluamos propiedades en distintas condiciones, incluyendo casas que necesitan reparaciones.',
     },
     {
-      q: '¿Tengo que hacer arreglos antes de vender?',
-      a: 'No necesariamente. Podemos evaluar la propiedad tal y como está.',
+      q: '¿Tengo que reparar la propiedad antes de contactarlos?',
+      a: 'No. Puedes enviarnos la información de la propiedad tal y como está.',
     },
     {
-      q: '¿Cobran comisión?',
-      a: 'Nuestro enfoque es ofrecer una alternativa directa y sencilla. Podemos explicarte cómo funciona según tu caso.',
+      q: '¿Qué necesitan para comenzar?',
+      a: 'Nombre, teléfono, ubicación de la propiedad y una breve explicación de la condición o situación.',
     },
     {
-      q: '¿Qué información necesitan para empezar?',
-      a: 'Dirección, condición general, fotos si las tienes, y tu situación o meta de venta.',
+      q: '¿Cuánto tarda el proceso?',
+      a: 'Depende del caso, pero nuestro enfoque es orientarte rápido y mantener un proceso sencillo.',
     },
   ];
 
@@ -75,7 +75,7 @@
         <div className="container topbar-inner">
           <div>
             <div className="brand">{business.name}</div>
-           <div className="brand-sub">Compramos casas en Puerto Rico</div>
+            <div className="brand-sub">Compramos casas en Puerto Rico</div>
           </div>
 
           <div className="topbar-actions">
@@ -99,10 +99,10 @@
                 ¿Necesitas vender tu casa <span>rápido</span>?
               </h1>
               <p className="hero-text">
-  Compramos casas en Puerto Rico y evaluamos propiedades en distintas condiciones.
-  Si necesitas vender rápido, te orientamos sobre una posible oferta cash de forma
-  clara, directa y sin complicaciones.
-</p>
+                Compramos casas en Puerto Rico y evaluamos propiedades en distintas condiciones.
+                Si necesitas vender rápido, te orientamos sobre una posible oferta cash de forma
+                clara, directa y sin complicaciones.
+              </p>
 
               <div className="hero-buttons">
                 <a href="#contacto" className="btn btn-primary">
@@ -158,7 +158,11 @@
 
                 <input name="name" required placeholder="Nombre" />
                 <input name="phone" required placeholder="Teléfono" />
-                <input name="propertyLocation" required placeholder="Pueblo o dirección de la propiedad" />
+                <input
+                  name="propertyLocation"
+                  required
+                  placeholder="Pueblo o dirección de la propiedad"
+                />
                 <textarea
                   name="details"
                   required
@@ -170,7 +174,12 @@
                 </button>
 
                 <div className="form-actions">
-                  <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn btn-outline full">
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn btn-outline full"
+                  >
                     Hablar por WhatsApp
                   </a>
                   <a
@@ -182,7 +191,7 @@
                     Hablar por Messenger
                   </a>
                 </div>
-             </form>
+              </form>
             </div>
           </div>
         </section>
@@ -203,7 +212,11 @@
             </div>
             <div className="stat-card highlight">
               <div className="section-label">Atención directa</div>
-<p>Te orientamos de forma rápida y clara para que puedas evaluar tus opciones sin presión.</p>
+              <p>
+                Te orientamos de forma rápida y clara para que puedas evaluar tus opciones sin
+                presión.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -271,43 +284,42 @@
             <div className="faq-box">
               <div className="section-label gold-text">FAQ</div>
               <div className="faq-list">
-            const faqs = [
-  {
-    q: '¿Compran casas en cualquier condición?',
-    a: 'Evaluamos propiedades en distintas condiciones, incluyendo casas que necesitan reparaciones.',
-  },
-  {
-    q: '¿Tengo que reparar la propiedad antes de contactarlos?',
-    a: 'No. Puedes enviarnos la información de la propiedad tal y como está.',
-  },
-  {
-    q: '¿Qué necesitan para comenzar?',
-    a: 'Nombre, teléfono, ubicación de la propiedad y una breve explicación de la condición o situación.',
-  },
-  {
-    q: '¿Cuánto tarda el proceso?',
-    a: 'Depende del caso, pero nuestro enfoque es orientarte rápido y mantener un proceso sencillo.',
-  },
-];
+                {faqs.map((item) => (
+                  <div key={item.q} className="faq-item">
+                    <h3>{item.q}</h3>
+                    <p>{item.a}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
 
         <section className="section">
           <div className="container cards-grid three">
             <div className="info-card">
               <div className="section-label gold-text">Por qué contactarnos</div>
-<h3>Proceso claro y comunicación directa</h3>
-<p>
-  Nuestro enfoque es darte orientación rápida, contestarte claro y ayudarte a evaluar
-  una posible venta sin procesos innecesarios.
-</p>
+              <h3>Proceso claro y comunicación directa</h3>
+              <p>
+                Nuestro enfoque es darte orientación rápida, contestarte claro y ayudarte a evaluar
+                una posible venta sin procesos innecesarios.
+              </p>
             </div>
+
             <div className="info-card">
-              <h3>Testimonio #1</h3>
               <h3>Atención rápida</h3>
-<p>Respondemos con claridad para ayudarte a entender el proceso desde el primer contacto.</p>
+              <p>
+                Respondemos con claridad para ayudarte a entender el proceso desde el primer
+                contacto.
+              </p>
+            </div>
+
             <div className="info-card">
-              <h3>Testimonio #2</h3>
-             <h3>Proceso sencillo</h3>
-<p>Buscamos que puedas compartir tu información y recibir orientación sin complicaciones.</p>
+              <h3>Proceso sencillo</h3>
+              <p>
+                Buscamos que puedas compartir tu información y recibir orientación sin
+                complicaciones.
+              </p>
             </div>
           </div>
         </section>
@@ -318,10 +330,8 @@
               <div className="section-label">Hablemos</div>
               <h2>Solicita tu evaluación hoy</h2>
               <p>
-               <p>
-  Si quieres vender una propiedad en Puerto Rico, envíanos tu información y te orientamos
-  sobre una posible oferta cash sin compromiso.
-</p>
+                Si quieres vender una propiedad en Puerto Rico, envíanos tu información y te
+                orientamos sobre una posible oferta cash sin compromiso.
               </p>
             </div>
 
@@ -339,7 +349,12 @@
                 <strong>Lunes a Sábado</strong>
               </div>
 
-              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn btn-gold full">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-gold full"
+              >
                 WhatsApp ahora
               </a>
               <a
@@ -367,9 +382,9 @@
       <footer className="footer">
         <div className="container footer-inner">
           <div>© 2026 {business.name}. Todos los derechos reservados.</div>
-          <div> Real Estate • Puerto Rico</div>
+          <div>Real Estate • Puerto Rico</div>
         </div>
       </footer>
     </div>
   );
-}         
+}
