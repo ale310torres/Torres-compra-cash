@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   title: 'Torres Compra Cash',
@@ -17,6 +18,7 @@ export default function RootLayout({
     <html lang="es">
       <body>
         {children}
+        <Analytics />
 
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
@@ -28,7 +30,7 @@ export default function RootLayout({
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '943296141616442');
+            fbq('init', 'YOUR_PIXEL_ID');
             fbq('track', 'PageView');
           `}
         </Script>
